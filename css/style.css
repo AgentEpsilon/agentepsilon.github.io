@@ -4,7 +4,7 @@ div {
 	border: 2px solid;
 	border-radius: 10px;
 	background: linear-gradient(darkgray, gray);
-	width: 50%;
+	width: 90%;
 }
 body {
 	background-color: lightgray;
@@ -18,6 +18,6 @@ a:link {
 	text-decoration: none;
 }
 a:hover {
-	
+
 	text-decoration: underline;
 }
