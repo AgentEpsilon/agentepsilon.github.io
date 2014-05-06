@@ -1,0 +1,15 @@
+{
+	"posts": 
+	[
+	    {
+	        "date": {"day":6,"month":5,"year":2014},
+	        "tags": ["dev", "test"],
+	        "content": "secondpost.md"
+	    },
+		{
+			"date": {"day":5,"month":5,"year":2014},
+			"tags": ["dev", "test"],
+			"content": "firstpost.md"
+		}
+	]
+}

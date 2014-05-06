@@ -1,0 +1,24 @@
+<script src="js/markdown.min.js"></script>
+<script type="text/javascript">
+    var markdown = markdown;
+    var blog = $("#blog");
+    $(document).ready(function(){
+    $.getJSON("posts.json").done(function(data){
+        $.get("posts/"+data.posts[0].content, function(file){
+            blog.html("<header>"+markdown.toHTML(file)+"</header>");
+        });
+        $.get("posts/"+data.posts[1].content, function(file){
+            blog.append("<section>"+markdown.toHTML(file)+"</section>");
+        });
+    });
+    });
+</script>
+<article id="blog">
+    
+</article>
+
+<aside>
+    <h3>About Me</h3>
+    <img src="img/me.jpg" class="avatar" />
+    <p>I am an amateur programmer, just testing the waters, learning the ropes, etc. Anything that I put up here will probably remain incomplete, at least for now.</p>
+</aside>

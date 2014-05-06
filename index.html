@@ -1,8 +1,81 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>Welcome to my GitHub page!<br />Check out my Unity game that I made here: <a href="Unity/Web.html">Click me!</a>
-</p>
-</body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Evan Miller</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/cheet.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            loadPage("home.html");
+        });
+        cheet('up up down down left right left right b a', function() {
+            alert("Konami Code Entered");
+        });
+        </script>
+    </head>
+    <body>
+    <div id="content">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+            Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Evan Miller's Website</h1>
+                <nav>
+                    <ul>
+                        <li><a onclick="loadPage('home.html')" >Home</a></li>
+                        <li><a onclick="loadPage('projects.html')">Projects</a></li>
+                        <li><a href="https://github.com/flaneflantastico" target="_blank">GitHub</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container" id="wrap">
+            <div class="main wrapper clearfix" id="main">
+
+                
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container" id="footer">
+            <footer class="wrapper">
+                Website by Evan Miller<br />
+                Using <a href="http://www.initializr.com" target="_blank">Initializr</a> Reactive Template
+            </footer>
+        </div>
+    </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--<script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>-->
+    </body>
 </html>
