@@ -1,0 +1,21 @@
+p, div {
+	font-family: "Courier New", Courier;
+	font-weight: bold;
+	font-size: 14px;
+	font-smooth: never;
+	-webkit-font-smoothing: none;
+	text-align: center;
+}
+
+div#header {
+	width: 300px;
+	height: 65px;
+	border: solid 10px;
+	border-style: outset;
+	margin-top: -10px;
+	margin-left: -10px;
+	background-color: lightgray;
+
+	text-align: center;
+	font-size: 40px;
+}

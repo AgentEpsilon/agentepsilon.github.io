@@ -1,5 +1,4 @@
-Second Post
-====
+#Second Post
 ---
 This is my _second post_! I'm just __trying__ out some different styles, plus the blog system that I wrote.
 
