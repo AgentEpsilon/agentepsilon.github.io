@@ -1,20 +1,29 @@
 <script src="js/markdown.min.js"></script>
 <script type="text/javascript">
     var markdown = markdown;
-    var blog = $("#blog");
+    var div = $("#blog");
     $(document).ready(function(){
-    $.getJSON("posts.json").done(function(data){
-        $.get("posts/"+data.posts[0].content, function(file){
-            blog.html("<header>"+markdown.toHTML(file)+"</header>");
+        $.getJSON("posts.json").done(function(data){
+            $.ajax({
+                type: 'GET',
+                async: false,
+                url: "posts/"+data.posts[0].content,
+                success: function(file){div.append("<header>"+markdown.toHTML(file)+"<hr><p class='blogfooter'>"+data.posts[0].date+" | Tags: "+data.posts[0].tags+"</p></header><br>");}
+            });
+            for(var i = 1; i < data.posts.length;i++){
+            $.ajax({
+                type: 'GET',
+                async: false,
+                url: "posts/"+data.posts[i].content,
+                success: function(file){div.append(("<section>"+markdown.toHTML(file)+"<hr><p class='blogfooter'>"+data.posts[i].date+" | Tags: "+data.posts[i].tags+"</p></section><br>").replace("h1", "h2"));}
+            });
+            }
+            $("#loading").remove();
         });
-        $.get("posts/"+data.posts[1].content, function(file){
-            blog.append("<section>"+markdown.toHTML(file)+"</section>");
-        });
-    });
     });
 </script>
 <article id="blog">
-    
+    <img src="img/ajax-loader.gif" id="loading"></img>
 </article>
 
 <aside>
