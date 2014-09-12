@@ -1,0 +1,96 @@
+body {
+  font-family: "Open Sans";
+  color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center{
+  text-align: center;
+  margin: auto;
+  position: relative;
+  min-height: 100%
+  width: 99%;
+}
+
+h1{
+  text-shadow: 3px 3px darkgray;
+}
+
+a{
+  color: inherit;
+  text-decoration: inherit;
+  transition: color .4s ease, text-decoration .4s ease-in;
+}
+
+a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  color: lightgray;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -25px;
+}
+footer, .push {
+  height: 25px;
+}
+
+.frame {
+  margin: auto;
+  margin-top: 1%;
+  width: 60%;
+  height: 500px;
+  background-color: darkgray;
+  border: 4px gray solid;
+  border-radius: 4px;
+}
+
+.frame span{
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button {
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  width: 3%;
+  background-color: darkgray;
+  border: 4px gray solid;
+  font-size: 80px;
+  color: black;
+}
+
+button:hover {
+  background-color: lightgray;
+  border-color: darkgray;
+  color: gray;
+}
+
+.right{
+  right: 0;
+  border-right: none;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.left{
+  left: 0;
+  border-left: none;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
