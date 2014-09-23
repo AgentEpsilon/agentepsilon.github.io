@@ -1,8 +1,8 @@
 var t = new Trianglify();
 var pattern = t.generate(window.innerWidth, window.innerHeight);
 
-var frames = ["<iframe width='100%'' height='100%'' src='GradeCalc/' frameborder='0'></iframe>",
-"page 2"];
+var frames = ["<h1><a href='//www.github.com/AgentEpsilon/GradeCalc'>GradeCalc</a></h1><h3>A BPS Grade Calculator</h3><iframe width='100%'' height='100%'' src='GradeCalc/index.html' frameBorder='0'></iframe>",
+"<h1><a href='//www.github.com/AgentEpsilon/Mineshock'>Mineshock</a></h1><h2>A Minecraft mod in progress</h2>"];
 
 var index = 0;
 
