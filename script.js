@@ -1,7 +1,7 @@
 var t = new Trianglify();
 var pattern = t.generate(window.innerWidth, window.innerHeight);
 
-var frames = ["<iframe width='100%'' height='100%'' src='//www.youtube.com/embed/QH2-TGUlwu4?rel=0' frameborder='0' allowfullscreen></iframe>",
+var frames = ["<iframe width='100%'' height='100%'' src='GradeCalc/' frameborder='0'></iframe>",
 "page 2"];
 
 var index = 0;
