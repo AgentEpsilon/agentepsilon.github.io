@@ -1,7 +1,7 @@
 <a name="top"></a>Table of Contents
 =================
-[Acknowledgements](#acknowledgements)
-[One](#one)
+- [Acknowledgements](#acknowledgements)
+- [One](#one)
 
 THE KITE RUNNER
 by
