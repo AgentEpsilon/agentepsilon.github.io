@@ -25,6 +25,9 @@
 		var msg = data.val();
 		$('#chat').append('<p>'+msg.name+':\t'+msg.message+'</p>');
 	});
+	chat.on('child_changed', function(data){
+		location.reload();
+	});
 </script>
 </body>
 </html>
