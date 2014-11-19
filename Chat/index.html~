@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multi-User Chat</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+</head>
+<body>
+<script>
+	var chat = new Firebase('https://ae-chat.firebaseio.com');
+	chat.on('child_added', function(data){});
+</script>
+</body>
+</html>

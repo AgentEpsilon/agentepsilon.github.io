@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multi-User Chat</title>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+</head>
+<body>
+<div id='chat'></div>
+<div id='box'>
+	<input type='text' id='name' placeholder='Name'>
+	<input type='text' id='message' placeholder='Message'>
+</div>
+<script type='text/javascript'>
+	var chat = new Firebase('https://ae-chat.firebaseio.com');
+	$('#message').keypress(function(e){
+		if(e.keyCode == 13){
+			var name = $('#name').val();
+			var message = $('#message').val();
+			chat.push({name: name, message: message});
+			$('#message').val('');
+		}
+	});
+	chat.on('child_added', function(data){
+		var msg = data.val();
+		$('#chat').append('<p>'+msg.name+':\t'+msg.message+'</p>');
+	});
+</script>
+</body>
+</html>
