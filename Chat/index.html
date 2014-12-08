@@ -6,16 +6,49 @@
 <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
 </head>
 <body>
+	<div id='ccontainer'>
 <div id='chat'></div>
 <div id='box'>
-	<input type='text' id='name' placeholder='Name'>
 	<input type='text' id='message' placeholder='Message'>
+</div>
+<input type='button' id='logout' value='Logout'>
+</div>
+<div id='lcontainer'>
+	<h1>Login</h1>
+	<input type='text' id='email' placeholder='Email'><br />
+	<input type='password' id='password' placeholder='Password'><br />
+	<input type='submit' id='login'><br />
+	<a href='register.html'>Create a new Account</a>
 </div>
 <script type='text/javascript'>
 	var chat = new Firebase('https://ae-chat.firebaseio.com');
+	var auth;
+	if(auth=chat.getAuth()){
+		$('#lcontainer').hide();
+		console.log('Welcome back, '+auth.password.email);
+	}else{
+	$('#ccontainer').hide();
+	}
+
+
+	$('#login').bind('click', function(){
+		chat.authWithPassword({email:$('#email').val(),password:$('#password').val()}, function(err, autharg){if(err===null){
+			$('#ccontainer').show();
+			$('#lcontainer').hide();
+			$('#message').focus();
+			auth=autharg;
+		}else{alert("Could not log in: "+error);}
+		});
+	});
+
+	$('#logout').bind('click', function(){
+		chat.unauth();
+		location.reload();
+	});
+
 	$('#message').keypress(function(e){
 		if(e.keyCode == 13){
-			var name = $('#name').val();
+			var name = auth.password.email;
 			var message = $('#message').val();
 			chat.push({name: name, message: message});
 			$('#message').val('');
