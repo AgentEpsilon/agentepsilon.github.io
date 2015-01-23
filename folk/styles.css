@@ -1,0 +1,55 @@
+div#content {
+  background-color: #DDD;
+  margin: .5em;
+  margin-left: auto;
+  margin-right:auto;
+  border-radius: 10px;
+  width: 80%;
+  display: table;
+  padding: 1em;
+}
+
+.song {
+  text-align: right;
+  margin-top: 0em;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+div.pure-g {
+  margin: .5em;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  color: gray;
+}
+
+footer a {
+  text-decoration: none;
+  color: #4040c0;
+}
+
+footer a:hover {
+  border-bottom: 1px dotted #4040c0;
+}
+
+h2 a{
+  color: #004a8c;
+}
+
+h2 a:hover {
+  cursor: pointer;
+  color: #0074d9;
+}
