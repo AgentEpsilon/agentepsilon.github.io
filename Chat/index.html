@@ -4,6 +4,7 @@
 <title>Multi-User Chat</title>
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
 <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+<script type='text/javascript' src='../marked.min.js'></script>
 </head>
 <body>
 	<div id='ccontainer'>
@@ -49,7 +50,9 @@
 	$('#message').keypress(function(e){
 		if(e.keyCode == 13){
 			var name = auth.password.email;
-			var message = $('#message').val();
+			var ren = new marked.Renderer();
+			ren.paragraph = function(text){return text;};
+			var message = marked($('#message').val(), {renderer:ren});
 			chat.push({name: name, message: message});
 			$('#message').val('');
 		}
@@ -64,6 +67,8 @@
 	chat.on('child_removed', function(data){
 		location.reload();
 	});
+
+	
 </script>
 </body>
 </html>
