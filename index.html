@@ -10,6 +10,16 @@
 </head>
 <body>
     <script type='text/javascript'>
+	function debounce(f, delay) {
+		var timeout;
+		return function() {
+			clearTimeout(timeout);
+			timeout = setTimeout(function() {
+				timeout = null;
+				f();
+			}, delay);
+		}
+	}
     function regen() {
         var pattern = Trianglify({
 			width: document.body.clientWidth, 
@@ -20,7 +30,7 @@
         document.body.setAttribute('style', 'background-image: url('+pattern.png()+')');
     }
     regen();
-    window.addEventListener('resize', regen);
+    window.addEventListener('resize', debounce(regen, 100));
     </script>
     <main>
         <h1>Evan Miller</h1>
