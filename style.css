@@ -9,7 +9,7 @@ body {
     width: 100%;
     top: 0;
     background-repeat: no-repeat;
-    font-family: "Open Sans";
+    font-family: "Roboto";
 }
 
 main {
@@ -26,4 +26,12 @@ footer {
     width: 100%;
     text-align: center;
     padding: 2px;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 2em;
 }
